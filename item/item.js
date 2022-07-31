@@ -1,6 +1,6 @@
 import './item.scss'
 
-const Item = (name, price) => {
+const Item = (name, price, onAdd) => {
     const ItemElement = document.createElement('div')
     ItemElement.className = 'item'
     const nameElement = document.createElement('span')
@@ -20,8 +20,9 @@ const Item = (name, price) => {
     plusElement.className = 'bt_plus' 
 
     const buttonElement = document.createElement('button')
-    buttonElement.className = 'add_button'
+    buttonElement.className = 'item__add-button'
     buttonElement.innerText = 'Добавить'
+    buttonElement.addEventListener('click', onAdd)
 
     ItemElement.appendChild(nameElement)
     ItemElement.appendChild(priceElement)
