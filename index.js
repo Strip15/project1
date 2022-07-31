@@ -1,5 +1,8 @@
-import ItemsList from './items-list'
 import Item from './item'
+import Cart from './cart'
+import ItemsList from './item-list'
+
+
 
 import 'normalize.css'
 import './index.scss'
@@ -22,18 +25,28 @@ const mocks = [
     },
 ]
 
+let cart = []
+
 const itemsList = ItemsList();
 document.body.appendChild(itemsList)
 
 const genereteItems = () => {
-    mocks.forEach((item)=>{
-        const ItemElement = Item(item.name, item.price)
+    mocks.forEach((item) => {
+
+        const onAdd = () => {
+            console.log('item added', item.id);
+            cart.push(item)
+        } 
+        const ItemElement = Item(item.name, item.price, ()=> console.log('item added', item.id))
         itemsList.appendChild(ItemElement)
     })
 }
 
 genereteItems();
-/* const item1 = Item('Гвоздь', 1);
+
+const cartElement = Cart(cart)
+document.body.appendChild(cartElement)
+/* const item1 = Item();
 itemsList.appendChild(item1) */
 
 
