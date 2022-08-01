@@ -1,0 +1,73 @@
+.item {
+  width: 200px;
+  height: 200px;
+  border: 1px solid bisque;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+
+  &:hover{
+    border-color: red;
+  }
+  
+  & > span {
+    display: block;
+  }
+
+  &__name {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__price {
+    font-size: 17px;
+    font-weight: 400;
+  }
+  &__add-button {
+    outline: none;
+    border: none;
+    background-color: rgb(229, 220, 243);
+    padding: 5px;
+    width: 100%;
+
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(183, 201, 195);
+    }
+  }
+  &__img{
+    width: 60px; 
+    height: 60px;
+  }
+
+/*    .bt_minus {
+    display: flex;
+    justify-content: space-around;
+  }
+ */
+/*   .input {
+    display: inline;
+    justify-content: space-around;
+  } */
+
+/*   .bt_plus {
+    display: flex;
+    justify-content: space-around;
+  } */
+  &__bt-minus {
+    outline: none;
+    border: none;
+    background-color: rgb(231, 146, 167);
+    padding: 5px;
+    width: 100%;
+
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(241, 50, 50);
+    } 
+}
+}

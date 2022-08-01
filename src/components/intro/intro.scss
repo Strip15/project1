@@ -1,0 +1,11 @@
+.intro {
+    background-image:linear-gradient(to top, rgb(182, 185, 197) 0%, transparent 100% ), url('/src/assets/img/Sale.png');
+    padding-bottom: 185px;
+    background-size: cover;
+    display: flex;
+    //justify-content: center;
+    //align-items: center;
+    //width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
